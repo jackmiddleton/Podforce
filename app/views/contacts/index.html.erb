@@ -1,0 +1,30 @@
+<div class="container mt-3 style="padding: 90px" >
+  <div class="row justify-content-center">
+
+    <div class="col-12" %>
+      <h1>Contact's</h1>
+      <div class="row">
+        <% @contacts.each do |contact| %>
+          <div class="col mt-3">
+
+            <div class="card">
+
+              <div class="card-body">
+                <h5 class="card-title"><%= contact.first_name %> <%= contact.last_name %></h5>
+                <h2>Contact Information</h2>
+                <p class="card-text"><%= contact.email %></p>
+                 <p class="card-text"><%= contact.instagram %></p>
+                  <p class="card-text"><%= contact.twitter %></p>
+                   <p class="card-text"><%= contact.linkedin %></p>
+
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
