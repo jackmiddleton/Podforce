@@ -1,18 +1,18 @@
 <%= simple_form_for [@task] do |t| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= t.error_notification %>
+    <%= t.error_notification message: t.object.errors[:base].to_sentence if t.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :description %>
-      <%= f.input :priority %>
-      <%= f.input :contact_id %>
-      <%= f.input :date_time %>
-      <%= f.input :ownership %>
-      <%= f.input :complete %>
-      <%= f.input :category %>
+      <%= t.input :description %>
+      <%= t.input :priority %>
+      <%= t.input :contact_id %>
+      <%= t.input :date_time %>
+      <%= t.input :ownership %>
+      <%= t.input :complete %>
+      <%= t.input :category %>
     </div>
 
     <div class="form-actions btn btn-primary">
-      <%= f.button :submit %>
+      <%= t.button :submit %>
     </div>
   <% end %>
