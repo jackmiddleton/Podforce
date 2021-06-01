@@ -2,6 +2,9 @@
   <div class="row justify-content-center">
 
     <div class="col-12" %>
+
+    <%= link_to "New Contact", new_contact_path %>
+
       <h1>Contact's</h1>
       <div class="row">
         <% @contacts.each do |contact| %>
@@ -16,6 +19,10 @@
                  <p class="card-text"><%= contact.instagram %></p>
                   <p class="card-text"><%= contact.twitter %></p>
                    <p class="card-text"><%= contact.linkedin %></p>
+
+                   <%= link_to "Show Contact", contact_path(contact) %>
+                   <%= link_to "Edit Contact", edit_contact_path(contact) %>
+
 
               </div>
             </div>
