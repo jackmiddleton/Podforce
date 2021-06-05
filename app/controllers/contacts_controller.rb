@@ -9,16 +9,20 @@ class ContactsController < ApplicationController
   end
 
   def show
-    @contact = Contact.new
+    @contact = Contact.find(params[:id])
   end
 
   def create
     @contact = Contact.new(contact_params)
-    # if @contact.save
-    #   redirect_to school_category_items_path(@school, @category), notice: "New Item Saved"
-    # else
-    #   render :new
-    # end
+    if @contact.save
+      redirect_to contact_path(@contact), notice: "New Item Saved"
+    else
+      render :new
+    end
+  end
+
+  def new
+    @contact = Contact.new
   end
 
   def edit

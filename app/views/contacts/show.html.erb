@@ -1,0 +1,17 @@
+<h1>Hello</h1>
+
+<div>
+  <div class="card">
+
+  <div class="card-body">
+      <h5 class="card-title"><%= @contact.first_name %> <%= @contact.last_name %></h5>
+    <h2>Contact Information</h2>
+      <p class="card-text"><%= @contact.email %>
+      <p class="card-text"><%= @contact.instagram %>
+      <p class="card-text"><%= @contact.twitter %>
+      <p class="card-text"><%= @contact.linkedin %>
+  </div>
+
+<div>
+  <%= link_to "Back", contacts_path %>
+</div>
