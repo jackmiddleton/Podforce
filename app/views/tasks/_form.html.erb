@@ -9,7 +9,7 @@
       <%= t.input :date_time %>
       <%= t.input :ownership %>
       <%= t.input :complete %>
-      <%= t.input :category %>
+      <%= t.input :category, collection: Task.categories %>
     </div>
 
     <div class="form-actions btn btn-primary">
