@@ -1,7 +1,11 @@
 class ContactsController < ApplicationController
 
   def index
-    @contacts = Contact.all
+    if params[:query].present?
+      @contacts = Contact.search_by_contact(params[:query])
+    else
+      @contacts = Contact.all
+    end
   end
 
   def show
