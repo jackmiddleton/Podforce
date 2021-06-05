@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_05_29_105727) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_105727) do
   create_table "contacts", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "phone"
+    t.string "phone"
     t.date "birth"
     t.string "company"
     t.string "email"
@@ -51,6 +53,33 @@ ActiveRecord::Schema.define(version: 2021_05_29_105727) do
     t.text "tag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.bigint "contact_id", null: false
+    t.string "to"
+    t.text "subject"
+    t.text "content"
+    t.string "cc"
+    t.date "date_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["contact_id"], name: "index_emails_on_contact_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.bigint "contact_id", null: false
+    t.bigint "user_id", null: false
+    t.text "description"
+    t.string "priority"
+    t.date "date_time"
+    t.string "ownership"
+    t.string "complete"
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["contact_id"], name: "index_tasks_on_contact_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,5 +97,11 @@ ActiveRecord::Schema.define(version: 2021_05_29_105727) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+
+  add_foreign_key "emails", "contacts"
+  add_foreign_key "tasks", "contacts"
+  add_foreign_key "tasks", "users"
+
 end
