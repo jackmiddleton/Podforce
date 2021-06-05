@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'users#show'
 
 
+
+
   resources :contacts do
     resources :emails, only: [ :index, :new, :create, :show]
   end
