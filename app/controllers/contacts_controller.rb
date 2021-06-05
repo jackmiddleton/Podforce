@@ -29,4 +29,9 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
   end
 
+  private
+
+  def contact_params
+    params.require(:contact).permit(:first_name, :last_name, :email, :instagram, :twitter, :linkedin)
+  end
 end
