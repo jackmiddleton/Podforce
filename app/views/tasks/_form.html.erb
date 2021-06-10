@@ -4,11 +4,10 @@
 
     <div class="form-inputs">
       <%= t.input :description %>
-      <%= t.input :priority %>
-      <%= t.input :contact_id %>
+      <%= t.input :priority, collection: Task.priorities %>
+      <%= t.input :contact_id, collection: current_user.contacts, label_method: :full_name%>
       <%= t.input :date_time %>
       <%= t.input :ownership %>
-      <%= t.input :complete %>
       <%= t.input :category, collection: Task.categories %>
     </div>
 
@@ -16,3 +15,4 @@
       <%= t.button :submit %>
     </div>
   <% end %>
+<%console%>
