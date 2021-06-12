@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      redirect_to contact_path(@contact), notice: "New Item Saved"
+      redirect_to contact_path, notice: "New Item Saved"
     else
       render :new
     end
@@ -32,7 +32,7 @@ class ContactsController < ApplicationController
   def update
     @contact = Contact.find(params[:id])
     if @contact.update_attributes(contact_params)
-        redirect_to contacts_path(@contact), notice: "Contact Edited"
+        redirect_to contacts_path, notice: "Contact Edited"
     else
         render :edit
     end
