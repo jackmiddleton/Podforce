@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
+
   before_action :authenticate_user!
+  #by default requires you to be logged to see all pages EXCEP home page - landing page
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -11,11 +13,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :username])
   end
 
-
 def after_sign_in_path_for(resource)
   stored_location_for(resource) || dashboard_path
 end
-
-
 
 end
