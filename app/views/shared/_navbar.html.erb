@@ -1,16 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "logo.jpg" %>
-    <% end %>
 
     <%= form_tag contacts_path, method: :get, class: "form-inline" do %>
       <%= search_field_tag :query,
         params[:query],
         placeholder: "Search for a Contact",
-        class: "form-control"
+        class: "form-control navbar-search"
       %>
 
-      <button type="submit" class="btn btn-link"><i class="fas fa-search-location"></i>
+      <button type="submit" class="navbar-search"><i class="fas fa-search-location"></i>
       </button>
     <% end %>
 
@@ -26,6 +23,10 @@
           <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
         </li>
 
+        <%# <li>
+          <%= @user.email %>
+        </li>
+     
         <li class="nav-item dropdown">
           <%= image_tag "headshot.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
