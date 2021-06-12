@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
+
   before_action :authenticate_user!
+  #by default requires you to be logged to see all pages EXCEP home page - landing page
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 

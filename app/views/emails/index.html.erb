@@ -1,0 +1,34 @@
+<div class="container mt-3 style="padding: 90px" >
+  <div class="row justify-content-center">
+
+    <div class="col-12">
+
+    <%= link_to "New Email", new_email_path %>
+
+      <h1>All Email's</h1>
+      <div class="row">
+        <% @emails.each do |email| %>
+          <div class="col mt-3">
+
+            <div class="card">
+
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <h2>Email</h2>
+
+                <%= link_to "Show Email", email_path(email) %>
+
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

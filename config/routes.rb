@@ -3,16 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'users#show'
 
+  resources :contacts
 
-
-
-  resources :contacts do
-    resources :emails, only: [ :index, :new, :create, :show]
-  end
+  resources :emails
 
   resources :tasks
 
   resources :users, only: [:edit, :update]
-
-
 end
