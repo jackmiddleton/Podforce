@@ -1,0 +1,38 @@
+<div class="sidebar">
+  <div class="sidebar-podforce sidebar-logo-center">
+    <%= link_to root_path do %>
+      <%= image_tag "logo.jpg" %>
+    <% end %>
+  </div>
+
+  <ul class="sidebar-no-bullets">
+    <li>
+      <i class="fas fa-home"></i>
+      <%= link_to "Home", dashboard_path %>
+    </li>
+    <li>
+      <i class="fas fa-tasks"></i>
+      <%= link_to "Tasks", tasks_path %>
+    </li>
+    <li>
+      <i class="fas fa-users"></i>
+      <%= link_to "Contacts", contacts_path %>
+    </li>
+    <li>
+      <i class="fas fa-chart-pie"></i>
+      <%= link_to "Analytics", dashboard_path %>
+    </li>
+    <li>
+      <i class="fas fa-star"></i>
+      <%= link_to "Reviews", dashboard_path %>
+    </li>
+    <li>
+      <i class="fas fa-cog"></i>
+      <%= link_to "Settings", dashboard_path %>
+    </li>
+    <li>
+      <i class="fas fa-sign-out-alt"></i>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    </li>
+  </ul>
+</div>

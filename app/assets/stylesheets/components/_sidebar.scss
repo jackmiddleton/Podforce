@@ -4,5 +4,18 @@
 }
 
 .sidebar-podforce img {
-  width: 100px;
+  width: 160px;
+}
+
+.sidebar-logo-center{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 50; 
+  margin: 20;
 }
