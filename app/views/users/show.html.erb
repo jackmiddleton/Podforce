@@ -1,15 +1,40 @@
-<!-- #this page is customized for the user -->
-<h1>Dashboard Page</h1>
+<div class="dashboard-container">
+  
+  <div class="sidebar col-sm-2">
+    <%= render 'shared/sidebar' %>
+    <%= @user.email %>
+  </div>
 
-<%= @user.email %>
+  <div class="col-sm-10">
+    <div class="inner-navbar">
+      <%= render 'shared/navbar' %>
+    </div>
 
+    <div class="d-flex container mt-3">
 
-<div>
+      <div class="col-4">
+        <div class="dashboard-reviews">
+          <h1>Recent Reviews</h1>
+        </div>
+        <div class="dashboard-podcasts">
+          <h1>The LiveUltra Podcast</h1>
+        </div>     
+      </div>
 
-  <%= link_to "Contacts", contacts_path %>
-  <%= link_to "Tasks", tasks_path %>
+      <div class="col-8">
+        <div class="dashboard-tasks">
+          <h1>Today's Tasks</h1>
 
-  <%#= link_to "Emails", emails_path %>
+          <div>
+            <%= link_to "Contacts", contacts_path %>
+            <%= link_to "Tasks", tasks_path %>
+            <%#= link_to "Emails", emails_path %>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
 
 </div>
 
