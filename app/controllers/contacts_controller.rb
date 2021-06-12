@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      redirect_to contact_path, notice: "New Item Saved"
+      redirect_to contact_path(@contact), notice: "New Item Saved"
     else
       render :new
     end
@@ -43,7 +43,7 @@ class ContactsController < ApplicationController
     if @contact.present?
       @contact.destroy
     end
-    redirect_to contacts_path(@contact), notice: "Contact Deleted"
+    redirect_to contacts_path, notice: "Contact Deleted"
   end
 
 
