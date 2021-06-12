@@ -13,11 +13,9 @@
 
       <div class="col-12">
         <%= link_to "New Contact", new_contact_path %>
-
         <div class="row">
           <% @contacts.each do |contact| %>
             <div class="col mt-3">
-
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><%= contact.first_name %> <%= contact.last_name %></h5>
@@ -29,6 +27,7 @@
 
                     <%= link_to "Show Contact", contact_path(contact) %>
                     <%= link_to "Edit Contact", edit_contact_path(contact) %>
+                    <%= link_to "Delete", contact_path(contact), method: :delete, remote: true, data: { confirm: 'Are you sure?' }%>
                 </div>
               </div>
             </div>
