@@ -13,6 +13,10 @@
       <div class="row justify-content-center">
         <div class="col-12">
             <h1>Tasks for <%= @task.description %> </h1>
+            <p class="card-text"> <strong>Priority: </strong><%= @task.priority %></p>
+            <p class="card-text"> <strong>Date: </strong><%= @task.date_time %></p>
+            <p class="card-text"> <strong>Complete: </strong><%= @task.complete %></p>
+            <p class="card-text"> <strong>Category: </strong><%= @task.category %></p>
         </div>
       </div>
     </div>
