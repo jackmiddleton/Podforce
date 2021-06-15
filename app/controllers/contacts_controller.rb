@@ -14,7 +14,8 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if @contact.save
+    @contact.user = current_user
+    if @contact.save!
       redirect_to contact_path(@contact), notice: "New Item Saved"
     else
       render :new
