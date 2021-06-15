@@ -23,13 +23,27 @@
 
       <div class="col-8">
         <div class="dashboard-tasks">
-          <h1>Today's Tasks</h1>
+          <h1>My Tasks</h1>
+        
+          <%= link_to "New Task", new_task_path, class: "btn btn-primary" %>
+          <div class="row">
+            <% @tasks.each do |task| %>
+              <div class="col-12 mt-3">
 
-          <div>
-            <%= link_to "Contacts", contacts_path %>
-            <%= link_to "Tasks", tasks_path %>
-            <%#= link_to "Emails", emails_path %>
-          </div>
+                <div class="card">
+
+                  <div class="card-body d-flex justify-content-between">
+                    <p class="card-title"><%= task.description %></p>
+                    <%= link_to "Show Task", task_path(task) %>
+                    
+                    <p class="card-text"> <%= task.date_time %></p>
+                    
+                    <i class="far <%= task.complete ? "fa-check-square" : "fa-square" %>"></i>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+
         </div>
       </div>
     
