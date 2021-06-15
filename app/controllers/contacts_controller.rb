@@ -29,6 +29,24 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
   end
 
+  def update
+    @contact = Contact.find(params[:id])
+    if @contact.update_attributes(contact_params)
+        redirect_to contacts_path, notice: "Contact Edited"
+    else
+        render :edit
+    end
+  end
+
+  def destroy
+    @contact = Contact.find(params[:id])
+    if @contact.present?
+      @contact.destroy
+    end
+    redirect_to contacts_path, notice: "Contact Deleted"
+  end
+
+
   private
 
   def contact_params

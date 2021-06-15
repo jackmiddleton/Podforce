@@ -1,10 +1,14 @@
 class EmailsController < ApplicationController
     def index
-        @email = Email.find(params[:id])
+        if params[:query].present?
+      @emails = Email.search_by_email(params[:query])
+    else
+      @emails = Email.all
     end
+  end
 
     def show
-        @email = Email.new
+        @email = Email.find(params[:id])
     end
 
     def new
@@ -30,6 +34,6 @@ class EmailsController < ApplicationController
 
     private
     def email_params
-        params.require(:email).permit(:to, :subject, :content, :cc, :date_time)
+        params.require(:email).permit(:to, :content, :cc, :date_time)
     end
 end

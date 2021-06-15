@@ -1,20 +1,45 @@
-<head>
+<div class="landing-container">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
-<style> #header { display: none } </style>
+    <div class="landing-podforce">
+      <%= image_tag "logo.jpg" %>
+    </div>
 
-  <div>
-<h1>Podforce</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+          </li>
+
+          <%# <li>
+            <%= @user.email %>
+          </li>
+      
+          <li class="nav-item dropdown">
+            <%= image_tag "headshot.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Contacts", contacts_path, class: "dropdown-item" %>
+              <%= link_to "Tasks", tasks_path, class: "dropdown-item" %>
+              <%= link_to "Emails", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-
-</head>
-
-
-<body>
-
-  <h2>The #1 Platform to Manage Your Podcast!</h2>
-
-</body>
-
-
-
-
+  <div>
+    <h1>Podforce</h1>
+    <h2>The #1 Platform to Manage Your Podcast!</h2>
+  </div>
+</div>

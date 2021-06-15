@@ -23,17 +23,17 @@ contact1 = Contact.first
 contact2 = Contact.last
 
 puts "Creating 2 tasks for each of the 3 users"
-task1 = Task.create!({contact: contact1, user: user1, description: "Set all the goals for this month", priority: "low", date_time: DateTime.new(2022,2,3), ownership: "You", complete: "No", category: "finance"})
+task1 = Task.create!({contact: contact1, user: user1, description: "Set all the goals for this month", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "finance"})
 
-task2 = Task.create!({contact: contact2, user: user1, description: "See the reviews", priority: "low", date_time: DateTime.new(2022,2,3), ownership: "You", complete: "No", category: "review"})
+task2 = Task.create!({contact: contact2, user: user1, description: "See the reviews", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "review"})
 
-task3 = Task.create!({contact: contact1, user: user2, description: "Schedule a ZOOM meeting", priority: "middle", date_time: DateTime.new(2022,2,3), ownership: "You", complete: "No", category: "appointment"})
+task3 = Task.create!({contact: contact1, user: user2, description: "Schedule a ZOOM meeting", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "appointment"})
 
-task4 = Task.create!({contact: contact2, user: user2, description: "Send email with audiogram", priority: "high", date_time: DateTime.new(2022,2,3), ownership: "You", complete: "No", category: "email"})
+task4 = Task.create!({contact: contact2, user: user2, description: "Send email with audiogram", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "email"})
 
-task5 = Task.create!({contact: contact1, user: user3, description: "Send email with audiogram", priority: "high", date_time: DateTime.new(2022,2,3), ownership: "You", complete: "No", category: "email"})
+task5 = Task.create!({contact: contact1, user: user3, description: "Send email with audiogram", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "email"})
 
-task6 = Task.create!({contact: contact2, user: user3, description: "Send email with invitation", priority: "low", date_time: DateTime.new(2022,2,3), ownership: "You", complete: "No", category: "email"})
+task6 = Task.create!({contact: contact2, user: user3, description: "Send email with invitation", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "email"})
 
 puts "Creating 2 emails for each of the 3 users"
 

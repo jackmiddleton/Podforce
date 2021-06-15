@@ -1,0 +1,38 @@
+.dashboard-container {
+  display: flex;
+  background-color: #F1EAF4;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 12px;
+  height: 90vh
+}
+
+.col-4 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.col-8 {
+  padding-right: 0px;
+}
+
+.dashboard-reviews {
+  background-color: white;
+  border-radius: 12px;
+  height: 200px;
+}
+
+.dashboard-podcasts {
+  background-color: white;
+  border-radius: 12px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.dashboard-tasks {
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  height: 100%
+}
