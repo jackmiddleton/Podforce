@@ -26,13 +26,13 @@
         <%# <li>
           <%= @user.email %>
         </li>
-     
+
         <li class="nav-item dropdown">
           <%= image_tag "headshot.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Contacts", contacts_path, class: "dropdown-item" %>
             <%= link_to "Tasks", tasks_path, class: "dropdown-item" %>
-            <%= link_to "Emails", "#", class: "dropdown-item" %>
+            <%= link_to "Emails", emails_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
