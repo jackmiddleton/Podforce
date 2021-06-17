@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  position:relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
 .sidebar {
-  background-color: white;
+//  position: fixed;
+  top: 0;
+  left:0;
+  height: 100vh;
+//  width: 240px;
+  background: white;
+  padding: 6px 14px;
   border-radius: 12px;
+  align-items: center;
 }
 
 .sidebar-podforce img {
@@ -16,6 +38,48 @@
 
 .sidebar-no-bullets {
   list-style-type: none; /* Remove bullets */
-  padding: 50; 
-  margin: 20;
+}
+
+.sidebar #btn {
+  position: relative;
+  color: black;
+  left: 90%;
+  top: 6px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+
+.sidebar ul{
+  margin-top:  20px;
+}
+
+.sidebar ul li{
+  height: 50px;
+  position: relative;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+}
+
+.sidebar ul li a{
+  color: black;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.sidebar ul li a:hover{
+  color: white;
+  background: purple;
+}
+.sidebar ul li a i{
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
 }
