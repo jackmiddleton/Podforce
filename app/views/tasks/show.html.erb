@@ -21,8 +21,12 @@
               <p class="card-text"> <strong>Category: </strong><%= @task.category %></p>
           </div>
         </div>
+
+          <div>
+             <%= link_to "Send Email", new_email_path, class: "btn btn-gradient" %>
+          </div>
       </div>
-       <%= link_to "Back", tasks_path %>
+       <%= link_to "Back", dashboard_path %>
     </div>
   </div>
 </div>
