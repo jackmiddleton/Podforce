@@ -1,53 +1,59 @@
 <div class="sidebar">
+
   <div class="sidebar-podforce sidebar-logo-center">
-  <i class='bx bx-menu' id="btn"></i>
     <%= link_to root_path do %>
-      <%= image_tag "logo.jpg" %>
+      <%= image_tag "logo.png" %>
     <% end %>
   </div>
-
   <ul class="sidebar-no-bullets">
     <li>
       <a href="#">
         <i class='bx bx-home'></i>
-        <span class="links_name"> <%= link_to "Home", dashboard_path %> </span>
-        </a>
+        <span class="links_name"> </span>
+      </a>
+      <span class="tooltip">Home</span>
     </li>
     <li>
       <a href="#">
-        <i class='bx bx-task'></i>
-        <span class="links_name"> <%= link_to "Tasks", tasks_path %> </span>
+        <i class='bx bx-task bx-lg'></i>
+        <span class="links_name"> </span>
         </a>
+        <span class="tooltip">Tasks</span>
     </li>
     <li>
       <a href="#">
         <i class='bx bxs-contact' ></i>
-        <span class="links_name"> <%= link_to "Contacts", contacts_path %> </span>
+        <span class="links_name"></span>
         </a>
+        <span class="tooltip">Contacts</span>
     </li>
     <li>
       <a href="#">
         <i class='bx bxs-badge-dollar'></i>
-        <span class="links_name">  <%= link_to "Analytics", dashboard_path %> </span>
+        <span class="links_name"> </span>
         </a>
+        <span class="tooltip">Analytics</span>
     </li>
     <li>
     <a href="#">
       <i class='bx bx-comment-detail' ></i>
-      <span class="links_name">  <%= link_to "Reviews", dashboard_path %> </span>
+      <span class="links_name"></span>
       </a>
+      <span class="tooltip">Reviews</span>
     </li>
     <li>
     <a href="#">
       <i class='bx bxs-cog'></i>
-      <span class="links_name">  <%= link_to "Settings", dashboard_path %> </span>
+      <span class="links_name"></span>
       </a>
+      <span class="tooltip">Settings</span>
     </li>
     <li>
     <a href="#">
-      <i class='bx bxs-log-out' id="log-out"></i>
-      <span class="links_name">  <%= link_to "Log out", destroy_user_session_path, method: :delete %> </span>
+    <i class='bx bxs-log-out' id="log-out"></i>
+      <span class="links_name"></span>
       </a>
+      <span class="tooltip">Log Out</span>
     </li>
   </ul>
 </div>

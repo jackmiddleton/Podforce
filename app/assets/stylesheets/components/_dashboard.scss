@@ -1,6 +1,8 @@
 .dashboard-container {
   background-color: #F1EAF4;
   width: 100%;
+  position: absolute;
+  height: 100%;
 }
 
 .inner-navba{
@@ -17,6 +19,9 @@
   padding-right: 0px;
 }
 
+#container-height{
+  height: 90%;
+}
 .dashboard-reviews {
   background-color: white;
   border-radius: 12px;
@@ -71,3 +76,4 @@
 .card-body{
   justify-content: space-between;
 }
+
