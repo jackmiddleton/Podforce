@@ -29,3 +29,18 @@
 	cursor: pointer;
 	outline: inherit;
 }
+
+.btn-gradient {
+  color: white;
+  padding: 6px 22px;
+  border-radius: 3px;
+  font-weight: bold;
+  background: linear-gradient(#9C6EF5, #4F2F74);
+  transition: background 0.3s ease;
+  border: 1px solid #4F2F74;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#4F2F74, #9C6EF5);
+  color: white;
+}
