@@ -77,6 +77,15 @@ body{
 
 }
 
+.sidebar ul li a.active{
+  color: #abadb3;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+
+}
+
 .sidebar ul li a:hover{
   color: #9C6EF5;
   border-radius: 12px;

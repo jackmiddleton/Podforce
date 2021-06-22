@@ -7,24 +7,25 @@
   </div>
   <ul class="sidebar-no-bullets">
     <li>
-      <a href="#">
+      <%= link_to dashboard_path do %>
+
         <i class='bx bx-home'></i>
         <span class="links_name"> </span>
-      </a>
+      <% end %>
       <span class="tooltip">Home</span>
     </li>
     <li>
-      <a href="#">
+      <%= link_to tasks_path do %>
         <i class='bx bx-task bx-lg'></i>
         <span class="links_name"> </span>
-        </a>
+        <% end %>
         <span class="tooltip">Tasks</span>
     </li>
     <li>
-      <a href="#">
+      <%= link_to contacts_path do %>
         <i class='bx bxs-contact' ></i>
         <span class="links_name"></span>
-        </a>
+        <% end %>
         <span class="tooltip">Contacts</span>
     </li>
     <li>
