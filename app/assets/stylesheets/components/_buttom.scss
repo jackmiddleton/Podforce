@@ -30,6 +30,24 @@
 	outline: inherit;
 }
 
+
+.logbtn {
+  background-color: #9637E2;
+  border: none;
+  color:  white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 40px;
+  font-size: 25px;
+  font-weight: 900;
+  height: 57px;
+  width: 288px;
+}
+
 .btn-gradient {
   color: white;
   padding: 6px 22px;
@@ -44,3 +62,4 @@
   background: linear-gradient(#4F2F74, #9C6EF5);
   color: white;
 }
+
