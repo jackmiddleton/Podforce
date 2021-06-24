@@ -5,13 +5,13 @@
 
   <div class="contacts labels">
     <div class="form-inputs">
-      <div class="d-flex justify-content-between">
-        <span class="input-name"> <%= f.input :first_name %> </span>
-        <span class="input-name"> <%= f.input :last_name %> </span>
-        <%= f.input :last_name %>
+      <div class="d-flex justify-content-between mb-5">
+        <span class="input-name"> <%= f.input :first_name, placeholder: "" %> </span>
+        <span class="input-name"> <%= f.input :last_name, placeholder: "" %> </span>
+        
       </div>
       <div>
-        <%= f.input :email %>
+        <%= f.input :email, placeholder: "name@gmail.com" %>
       </div>
       <div class="d-flex justify-content-between">
         <%= f.input :instagram %>
@@ -21,8 +21,11 @@
       <div class="d-flex justify-content-between">
         <%= f.input :photo, as: :file %>  
           <input type="submit" name="commit" value="Create Contact" class="logbtn" data-disable-with="Create Contact">
-        
-        <span class="logbtn"><%= link_to "Back", contacts_path %></span>
+      
+        <%= link_to contacts_path do %>
+          <span class="logbtn">Back</span>
+        <%end%>
+
       </div>
     
     </div>
