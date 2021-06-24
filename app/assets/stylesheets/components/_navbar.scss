@@ -2,6 +2,8 @@
   justify-content: space-between;
   margin-left: 0px;
   font-weight: bolder;
+  width: 100%;
+  padding: 20px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,3 +18,23 @@
   border-radius: 12px;
 }
 
+.sidebar ul li input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #9C6EF5;
+  padding-left: 50px;
+  font-size: 18px;
+  color: white;
+
+}
+.sidebar ul li .btx-search{
+  position: absolute;
+  z-index: 99;
+  color: #abadb3;
+}
