@@ -12,7 +12,7 @@
   <div class="container mt-3">
     <div class="row justify-content-center">
       <div class="col-12" %>
-        <h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
+        <h2 class="contact-header"><%= @contact.first_name %> <%= @contact.last_name %></h2>
         
         <%= render 'form', contact: @contact %>
 
