@@ -31,10 +31,23 @@ class TasksController < ApplicationController
 
     def update
         @task = Task.find(params[:id])
-        if @task.update_attributes(task_params)
+
+# byebug
+
+        if @task.update_attributes!(task_params)
             redirect_to tasks_path(@task), notice: "Task Edited"
         else
             render :edit
+        end
+    end
+    
+    def toggle_completed
+        @task = Task.find(params[:id])
+# byebug
+        @task.complete = !@task.complete
+
+        if @task.save!
+            redirect_to dashboard_path
         end
     end
 

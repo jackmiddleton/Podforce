@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   resources :emails
 
-  resources :tasks
+  resources :tasks do
+    member do
+      put :toggle_completed
+    end
+  end
 
   resources :users, only: [:edit, :update]
 end

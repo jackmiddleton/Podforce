@@ -19,3 +19,47 @@
   display: inline-block;
   font-size: 16px;
 }
+
+.checkbutton {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+.logbtn {
+  background-color: #9637E2;
+  border: none;
+  color:  white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 40px;
+  font-size: 25px;
+  font-weight: 900;
+  height: 57px;
+  width: 288px;
+}
+
+.btn-gradient {
+  color: white;
+  padding: 6px 22px;
+  border-radius: 3px;
+  font-weight: bold;
+  background: linear-gradient(#9C6EF5, #4F2F74);
+  transition: background 0.3s ease;
+  border: 1px solid #4F2F74;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#4F2F74, #9C6EF5);
+  color: white;
+}
+

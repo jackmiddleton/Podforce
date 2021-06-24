@@ -4,7 +4,8 @@ class ContactsController < ApplicationController
     if params[:query].present?
       @contacts = Contact.search_by_contact(params[:query])
     else
-      @contacts = Contact.all
+      #@contacts = Contact.all
+      @contacts = Contact.where(user: current_user)
     end
   end
 

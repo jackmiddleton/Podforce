@@ -1,20 +1,70 @@
-<h2>Log in</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<div class="log-container justify-content-center">
+
+  <div class="log-logo">
+    <%= image_tag "log-logo.png" %>
+  </div>
+  
+  <div class="log-square1">
+    <%= image_tag "log-square1.png" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <div class="log-square2">
+    <%= image_tag "log-square2.png" %>
   </div>
-<% end %>
+    
+  
+  
+  
+  
+  <div class="log-form">
+  
+    <h2 class="login-header">Welcome Back</h2>
 
-<%= render "devise/shared/links" %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    label: false,
+                    placeholder: "Email",
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: false,
+                    label: false,                
+                    placeholder: "Password",
+                    input_html: { autocomplete: "current-password" } %>
+        
+        <div class="d-flex justify-content-between">
+          <%= f.input :remember_me, as: :boolean, label: "Keep me logged in", class: "checkbox inline" %>
+          
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+            <span class="log-links"><%= link_to "Forgot password?", new_password_path(resource_name) %></span>
+        </div>
+        
+      </div>   
+    <% end %>
+        
+
+        
+      
+
+      <div class="form-actions">
+        <%# <%= f.button :submit, "Login" %>
+
+        <input type="submit" name="commit" value="Login" class="logbtn" data-disable-with="Login">
+        
+      </div>
+    <% end %>
+
+    <div class="register">
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <p>You don't have an account? <span class="log-links"><%= link_to "Register", new_registration_path(resource_name) %></span></p>
+      <% end %>
+    </div>
+    
+    <%= render "devise/shared/links" %>
+    
+  </div>
+  
+</div>

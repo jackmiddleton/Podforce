@@ -3,7 +3,8 @@ class EmailsController < ApplicationController
         if params[:query].present?
       @emails = Email.search_by_email(params[:query])
     else
-      @emails = Email.all
+      #@emails = Email.all
+      @emails = Email.joins(:contact).where(contacts: {user: current_user})
     end
   end
 
