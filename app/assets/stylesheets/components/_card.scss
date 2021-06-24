@@ -1,0 +1,27 @@
+.card-task{
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    height: 100%;
+    padding: 20px;
+    width:500px;
+    margin: 10px;
+}
+
+.card-task a {
+    color: white;
+    background-color: #9c6ef5;
+    justify-content: center;
+    margin: 20px;
+    padding: 0px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    width: 100px;
+}
+
+.card-task a:hover {
+    background-color: #5a30ad;
+
+}

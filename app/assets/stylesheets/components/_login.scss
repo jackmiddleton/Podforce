@@ -1,0 +1,80 @@
+.login-header {
+  margin: 80px 0 50px 0;
+  color: #9637E2;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 75,42px;
+}
+
+.log-container {
+  background-color: white;
+  position: relative;
+  height: 100vh;
+    
+}
+
+.log-form {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  // height: 100vh;
+}
+
+.log-logo {
+  padding: 50px 0 0 50px;
+}
+
+.log-logo img {
+  width: 258px;
+}
+
+.log-square1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.log-square1 img {
+  height: 400px;
+}
+
+.log-square2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.log-square2 img {
+  height: 400px;
+}
+
+.register {
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 35px;
+align-items: center;
+color: #7A7D80;
+}
+
+.log-links a {
+  color: #9637E2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.log-links a:hover {
+  opacity: 0.7;
+}
+
+
+#new_user input {
+  text-align: center;
+}
+#new_user ::-webkit-input-placeholder {
+  text-align: center;
+}
+#new_user :-moz-placeholder {
+  text-align: center;
+}
