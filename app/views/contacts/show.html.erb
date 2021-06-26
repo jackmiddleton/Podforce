@@ -4,47 +4,47 @@
       <%= render 'shared/sidebar' %>
     </div>
 
-    <div class="col-10 p-2 container">
+    <div class="col-10 col-sm-11 container">
       <div class="row inner-navbar">
           <%= render 'shared/navbar' %>
       </div>
 
       <div id="container-height" class="row">
-        <div class="col-4">
-          <div class="contact-profile justify-content-end">
+        <div class="col-4 contact-profile justify-content-end">
               <h1 id="header"><strong>Guest Profile </strong></h1>
-              <div class="col-12 ">
-                  <div class="card">
-                    <div class="card-body">
+              <div class="col-12 card-body">
                       <div class="photo-profile d-flex">
                         <%if @contact.photo.present?%>
-                          <%=cl_image_tag @contact.photo.key, height: 200, width: 200, crop: :fill %>
+                          <img><%=cl_image_tag @contact.photo.key, height: 200, width: 200, crop: :fill %>
                         <%end%>
                         <h5 class="card-title"><%= @contact.first_name %> <%= @contact.last_name %></h5>
                       </div>
                       <div class="send-email d-flex">
                         <h2 class="card-text"><strong>Email</strong></h2>
-                        <p class="card-text">Send Email</p>
+                        <%= link_to dashboard_path do %>
+                          <p class="card-button">Send Email</p>
+                        <%end%>
                       </div>
                       <p class="card-text"><%= @contact.email %></p>
 
                       <h2 class="card-text"><strong>Instagram</strong></h2>
                       <p class="card-text"><%= @contact.instagram %></p>
 
-                      <h2 class="card-text"><strong>Twitter</strong><h2>
+                      <h2 class="card-text"><strong>Twitter</strong></h2>
                       <p class="card-text"><%= @contact.twitter %></p>
 
                       <h2 class="card-text"><strong>Linkedin</strong></h2>
                       <p class="card-text"><%= @contact.linkedin %></p>
-                    </div>
-                  </div>
               </div>
-          </div>
         </div>
 
         <div class="col-8">
           <div class="contact-tasks">
-            <h1 id="header"><strong>Timeline</strong>   Notes   Events</h1>
+            <div id="header" class="d-flex">
+              <h1><u>Timeline</u></h1>
+              <h1>Notes</h1>
+              <h1>Events</h1>
+            </div>
             <div class="row">
               <div class="info d-flex">
                 <div>
@@ -56,7 +56,9 @@
                   <p> HORA </p>
                 </div>
               </div>
+            </div>
 
+            <div class="row">
               <div class="info d-flex">
                 <div>
                   <h3> Podcast Uploaded: Epsiode #28 </h3>
@@ -67,7 +69,9 @@
                   <p> HORA </p>
                 </div>
               </div>
+            </div>
 
+            <div class="row">
               <div class="info d-flex">
                 <div>
                   <h3> Podcast Uploaded: Epsiode #28 </h3>
@@ -78,7 +82,9 @@
                   <p> HORA </p>
                 </div>
               </div>
+            </div>
 
+            <div class="row">
               <div class="info d-flex">
                 <div>
                   <h3> Podcast Uploaded: Epsiode #28 </h3>
@@ -89,7 +95,9 @@
                   <p> HORA </p>
                 </div>
               </div>
+            </div>
 
+            <div class="row">
               <div class="info d-flex">
                 <div>
                   <h3> Podcast Uploaded: Epsiode #28 </h3>
@@ -100,18 +108,6 @@
                   <p> HORA </p>
                 </div>
               </div>
-
-              <div class="info d-flex">
-                <div>
-                  <h3> Podcast Uploaded: Epsiode #28 </h3>
-                  <p> Sarah Jones, Founder @ Healthy Nutrition </p>
-                </div>
-                <div>
-                  <h3> DATA </h3>
-                  <p> HORA </p>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
