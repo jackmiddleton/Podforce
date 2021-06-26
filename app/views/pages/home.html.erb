@@ -2,7 +2,7 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
     <div class="landing-podforce">
-      <%= image_tag "logo.jpg" %>
+      <%= image_tag "log-logo.png" %>
     </div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,34 +29,39 @@
 
         <% else %>
 
-          <li class="nav-item">
-              <a href="#features">Features</a>
-            </li>
-          <li class="nav-item">
-            <a href="#product">Product</a>
-          </li>
-          <li class="nav-item">
-            <a href="#pricing">Pricing</a>
-          </li>
 
-           <li class="nav-item">
-            <%= link_to "Signup", new_user_registration_path, class: "nav-link" %>
-          </li>
+                <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Features</a>
+                  </li>
 
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Product</a>
+                  </li>
 
-        <% end %>
-      </ul>
-    </div>
-  </div>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Pricing</a>
+                  </li>
 
-  <!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);"> -->
+                  <li class="nav-item">
+                      <%= link_to "Signup", new_user_registration_path, class: "secbtn" %>
+                  </li>
+
+                  <li class="nav-item">
+                      <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                  </li>
+                </ul>
+              <% end %>
+          </div>
+        </div>
+
+
   <div class="container">
+    <figure class="text-center">
     <h1>Manage & Grow Your Podcast With Podforce!</h1>
     <p>All in one central platform</p>
-    <a class="btn btn-flat" href="#">Try now</a>
+      <%= link_to "Try Now", new_user_registration_path, class: "secbtn" %>
+    </figure>
   </div>
 </div>
 
