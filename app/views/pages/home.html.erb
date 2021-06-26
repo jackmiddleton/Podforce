@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.scss">
+
+
 <div class="landing-container">
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
@@ -54,14 +65,66 @@
               <% end %>
           </div>
         </div>
+    </head>
 
-
-  <div class="container">
-    <figure class="text-center">
-    <h1>Manage & Grow Your Podcast With Podforce!</h1>
+<body>
+<div class="hero-image">
+  <div class="hero-text">
+    <h2>Manage & Grow Your Podcast With Podforce!</h2>
     <p>All in one central platform</p>
-      <span class="secbtn"><%= link_to "Try Now", new_user_registration_path %></span>
-    </figure>
+    <span class="secbtn"><%= link_to "Try Now", new_user_registration_path %></span>
   </div>
 </div>
+
+<!-- code a "How it works" section -->
+  <div class="container">
+    <h2 class="text-center">How it works</h2>
+    <div class="cards">
+
+      <div class="card">
+        <img src="images/apply.svg" alt="">
+        <h4>Apply</h4>
+        <p>First apply to one of our campuses around the world.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/learn.svg" alt="">
+        <h4>Learn to code</h4>
+        <p>Learn Ruby on Rails, Javascript, SQL & much more!</p>
+      </div>
+
+      <div class="card">
+        <img src="images/product.svg" alt="">
+        <h4>Build products</h4>
+        <p>Finally you will be able to bring your ideas to life.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+<div class="footer">
+    <div class="links">
+      <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-fw fa-github"></i></a>
+      <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      <p>This website was coded with <i class="fas fa-heart"></i> by team Podforce.</p>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
 
