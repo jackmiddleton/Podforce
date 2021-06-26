@@ -16,7 +16,7 @@
             <span class="secbtn"><%= link_to "Back", dashboard_path %></span>
             <div class="row">
               <% @tasks.each do |task| %>
-                <div class="col-4 p-2">
+                <div class="col-12 p-2">
                   <div class="card-task">
                     <div class="card-body">
                       <h2 class="card-title"><%= task.description %></h2>
