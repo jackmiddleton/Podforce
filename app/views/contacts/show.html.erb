@@ -17,7 +17,7 @@
                         <%if @contact.photo.present?%>
                           <img><%=cl_image_tag @contact.photo.key, height: 200, width: 200, crop: :fill %>
                         <%end%>
-                        <h5 class="card-title"><%= @contact.first_name %> <%= @contact.last_name %></h5>
+                        <h5 id="title" class="card-title"><%= @contact.first_name %> <%= @contact.last_name %></h5>
                       </div>
                       <div class="send-email d-flex">
                         <h2 class="card-text"><strong>Email</strong></h2>

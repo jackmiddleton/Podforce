@@ -36,6 +36,9 @@
 
 #navbar-color{
   background-color: #d9ade9;
+
+.bg-purple {
+  background-color: #F1EAF4;
 }
 
 .info{
@@ -62,6 +65,7 @@
 h1{
   padding: 10px;
   color: white;
+<<<<<<< HEAD
 }*/
 
 img{
@@ -76,7 +80,7 @@ img{
   border-radius: 5px;
 }
 
-.card-title{
+#title{
   margin-bottom: 0.75rem;
   margin: 10px;
   font-size: xxx-large;
@@ -90,7 +94,7 @@ img{
   margin-right: 40px;
 }
 
-.card-text, .photo-profile{
+#cardtext, .photo-profile{
   padding-bottom: 20px;
 
 }
