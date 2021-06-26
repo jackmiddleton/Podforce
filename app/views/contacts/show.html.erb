@@ -11,16 +11,26 @@
 
       <div id="container-height" class="row">
         <div class="col-4">
-          <div class="dashboard-reviews justify-content-end">
+          <div class="contact-profile justify-content-end">
               <h1 id="header"><strong>Guest Profile </strong></h1>
               <div class="col-12 ">
                   <div class="card">
-                    <div class="card-body d-flex">
+                    <div class="card-body">
                       <h5 class="card-title"><%= @contact.first_name %> <%= @contact.last_name %></h5>
-                      <p class="card-text"><%= @contact.email %>
-                      <p class="card-text"><%= @contact.instagram %>
-                      <p class="card-text"><%= @contact.twitter %>
-                      <p class="card-text"><%= @contact.linkedin %>
+                      <div class="send-email d-flex">
+                        <h2 class="card-text"><strong>Email</strong></h2>
+                        <p class="card-text">Send Email</p>
+                      </div>
+                      <p class="card-text"><%= @contact.email %></p>
+
+                      <h2 class="card-text"><strong>Instagram</strong></h2>
+                      <p class="card-text"><%= @contact.instagram %></p>
+
+                      <h2 class="card-text"><strong>Twitter</strong><h2>
+                      <p class="card-text"><%= @contact.twitter %></p>
+
+                      <h2 class="card-text"><strong>Linkedin</strong></h2>
+                      <p class="card-text"><%= @contact.linkedin %></p>
                     </div>
                   </div>
               </div>
@@ -28,9 +38,11 @@
         </div>
 
         <div class="col-8">
-          <div class="dashboard-tasks">
-            <h1 id="header"><strong>My Tasks</strong></h1>
+          <div class="contact-tasks">
+            <h1 id="header"><strong>Timeline</strong>   Notes   Events</h1>
             <div class="row">
+              <h3> Podcast Uploaded: Epsiode #28 </h3>
+              <p> Sarah Jones, Founder @ Healthy Nutrition </p>
             </div>
           </div>
         </div>
