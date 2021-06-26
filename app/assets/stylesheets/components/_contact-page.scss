@@ -1,8 +1,20 @@
-#header{
+.header{
     background-color: #9c6ef5;
     height: 100px;
     color: #ffffff;
     justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  #header{
+    background-color: #9c6ef5;
+    height: 100px;
+    color: #ffffff;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 20px;
+
   }
 
 .contact-profile{
@@ -14,7 +26,7 @@
 }
 
 .contact-tasks{
-    background-color: #A175F5;
+    background-color: #b291f0;
     border-radius: 12px;
     color: #7a7d80;
     height: 80%;
@@ -23,10 +35,74 @@
 
 }
 
+#navbar-color{
+  background-color: #F1EAF4;
+}
+
 .bg-purple {
   background-color: #F1EAF4;
 }
 
 .info{
+  color: #313034;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: white;
+  border-radius: 5px;
+  width: 1500px;
+  height: 150px;
+  justify-content: space-between;
+}
+
+.col-8{
+  height: 1500px;
+}
+
+.col-4{
+  height: 1200px;
+}
+
+#cardtext{
+  padding: 20px;
+}
+
+
+img{
+  border-radius: 50%;
+}
+
+.card-button{
+  background-color: #9637E2;
   color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#title{
+  margin-bottom: 0.75rem;
+  margin-top: 60px;
+  padding: 10px;
+  font-size: xxx-large;
+  margin-left: 50px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.send-email{
+  justify-content: space-between;
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+#cardtext, .photo-profile{
+  padding-bottom: 20px;
+
+}
+
+.card-button:hover{
+  text-decoration: none;
+  background-color: #9637E2;
 }

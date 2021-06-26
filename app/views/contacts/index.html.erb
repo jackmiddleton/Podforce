@@ -16,11 +16,11 @@
             <span class="secbtn"><%= link_to "Back", dashboard_path %></span>
             <div class="row">
               <% @contacts.each do |contact| %>
-                <div class="col-6 p-2">
+                <div class="col-12 p-2">
                   <div class="card-task">
                     <div class="card-body">
                       <h2 class="card-title"><%= contact.first_name %> <%= contact.last_name %></h2>
-                      
+
                       <p class="card-text"><%= contact.email %></p>
                       <p class="card-text"><%= contact.instagram %></p>
                       <p class="card-text"><%= contact.twitter %></p>
