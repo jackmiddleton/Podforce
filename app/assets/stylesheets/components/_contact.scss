@@ -1,0 +1,28 @@
+.contacts {
+  // background-color: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  height: 100%
+}
+
+.labels {
+  color: #9637E2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-header {
+  color: #9637E2;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 75,42px;
+}
+
+.input-name {
+    display: block;
+    width: 45%;
+    height: calc(1.5em + 0.75rem + 2px); 
+    border-radius: 5px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
