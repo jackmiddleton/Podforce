@@ -8,7 +8,7 @@
       <div class="d-flex justify-content-between mb-5">
         <span class="input-name"> <%= f.input :first_name, placeholder: "" %> </span>
         <span class="input-name"> <%= f.input :last_name, placeholder: "" %> </span>
-        
+
       </div>
       <div>
         <%= f.input :email, placeholder: "name@gmail.com" %>
@@ -19,15 +19,15 @@
         <%= f.input :linkedin %>
       </div>
       <div class="d-flex justify-content-between">
-        <%= f.input :photo, as: :file %>  
+        <%= f.input :photo, as: :file %>
           <input type="submit" name="commit" value="Save" class="logbtn" data-disable-with="Create Contact">
-      
+
         <%= link_to contacts_path do %>
           <span class="logbtn">Back</span>
         <%end%>
 
       </div>
-    
+
     </div>
   </div>
 <% end %>

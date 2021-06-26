@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-
+  has_one_attached :photo
   # include PgSearch::Model
   #   multisearchable against: [ :first_name, :last_name, :company ]
 
