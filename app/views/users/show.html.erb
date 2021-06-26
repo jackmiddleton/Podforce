@@ -38,9 +38,9 @@
                     <div class="card-body d-flex justify-content-between">
                       <div>
                         <%= button_to toggle_completed_task_path(task), method: :put, remote: true, class: "checkbutton" do %>
-                        <i class="far <%= task.complete ? "fa-check-square" : "fa-square" %>"></i>
-                          <%#= f.input_field :complete, as: :boolean, boolean_style: :inline, checked_value: true, unchecked_value: false %>
-                          <%#= f.submit %>
+                          <i class="far <%= task.complete ? "fa-check-square" : "fa-square" %>"></i>
+                            <%#= f.input_field :complete, as: :boolean, boolean_style: :inline, checked_value: true, unchecked_value: false %>
+                            <%#= f.submit %>
                         <% end %>
                       </div>
 
@@ -57,13 +57,14 @@
                       <div>
                         <p class="card-text"> <%= task.date_time %></p>
                       </div>
+                    </div>
                   </div>
                 </div>
               <% end %>
-            </div>
               <div id="button" class="d-flex justify-content-center">
                 <%= link_to "+", new_task_path, class: "btn secbtn" %>
               </div>
+            </div>
           </div>
         </div>
       </div>

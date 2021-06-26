@@ -22,10 +22,11 @@
             </div>
           </div>
         </div>
-
-          <div>
-             <%= link_to "Send Email", new_email_path, class: "btn btn-gradient" %>
-          </div>
+          <% if @task.category == "email" %>
+            <div>
+              <%= link_to "Send Email", new_email_path, class: "btn btn-gradient" %>
+            </div>
+          <%end%>
       </div>
        <%= link_to "Back", dashboard_path %>
     </div>
