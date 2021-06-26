@@ -1,38 +1,60 @@
 <div class="sidebar">
+
   <div class="sidebar-podforce sidebar-logo-center">
     <%= link_to root_path do %>
-      <%= image_tag "logo.jpg" %>
+      <%= image_tag "logo.png" %>
     <% end %>
   </div>
-
   <ul class="sidebar-no-bullets">
     <li>
-      <i class="fas fa-home"></i>
-      <%= link_to "Home", dashboard_path %>
+      <%= link_to dashboard_path do %>
+
+        <i class='bx bx-home'></i>
+        <span class="links_name"> </span>
+      <% end %>
+      <span class="tooltip">Home</span>
     </li>
     <li>
-      <i class="fas fa-tasks"></i>
-      <%= link_to "Tasks", tasks_path %>
+      <%= link_to tasks_path do %>
+        <i class='bx bx-task bx-lg'></i>
+        <span class="links_name"> </span>
+        <% end %>
+        <span class="tooltip">Tasks</span>
     </li>
     <li>
-      <i class="fas fa-users"></i>
-      <%= link_to "Contacts", contacts_path %>
+      <%= link_to contacts_path do %>
+        <i class='bx bxs-contact' ></i>
+        <span class="links_name"></span>
+        <% end %>
+        <span class="tooltip">Contacts</span>
     </li>
     <li>
-      <i class="fas fa-chart-pie"></i>
-      <%= link_to "Analytics", dashboard_path %>
+      <a href="#">
+        <i class='bx bxs-badge-dollar'></i>
+        <span class="links_name"> </span>
+        </a>
+        <span class="tooltip">Analytics</span>
     </li>
     <li>
-      <i class="fas fa-star"></i>
-      <%= link_to "Reviews", dashboard_path %>
+    <a href="#">
+      <i class='bx bx-comment-detail' ></i>
+      <span class="links_name"></span>
+      </a>
+      <span class="tooltip">Reviews</span>
     </li>
     <li>
-      <i class="fas fa-cog"></i>
-      <%= link_to "Settings", dashboard_path %>
+    <a href="#">
+      <i class='bx bxs-cog'></i>
+      <span class="links_name"></span>
+      </a>
+      <span class="tooltip">Settings</span>
     </li>
     <li>
-      <i class="fas fa-sign-out-alt"></i>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <a href="#">
+    <i class='bx bxs-log-out' id="log-out"></i>
+      <span class="links_name"></span>
+      </a>
+      <span class="tooltip">Log Out</span>
     </li>
   </ul>
 </div>
