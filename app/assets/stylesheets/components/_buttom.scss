@@ -10,14 +10,26 @@
 }
 
 .secbtn {
-  background-color: #AC97E1;
-  border: none;
-  color: #5A2FC2;
-  padding: 8px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    height: 100%;
+    text-align: center;
+}
+
+.secbtn a {
+    color: white;
+    background-color: #9c6ef5;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+}
+
+.secbtn a:hover {
+    background-color: #5a30ad;
 }
 
 .checkbutton {
