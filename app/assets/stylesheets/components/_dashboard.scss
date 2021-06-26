@@ -26,7 +26,6 @@
   background-color: white;
   border-radius: 12px;
   height: 200px;
-  padding: 10px;
   color: #7a7d80;
   height: 48%
 }
@@ -60,13 +59,17 @@
   border-radius: 12px;
   margin-bottom: 20px;
   height: 100%;
-  padding: 20px;
 }
 
 #button{
-  padding: 0px;
+  padding: 10px;
+  margin-top: 150px;
+  margin-left: 500px;
   text-align: center;
   justify-content: center;
+  background-color: #9c6ef5;
+  color: white;
+  border-radius: 4px;
 }
 
 .card{
