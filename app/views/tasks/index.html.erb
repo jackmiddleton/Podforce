@@ -4,31 +4,32 @@
       <%= render 'shared/sidebar' %>
     </div>
 
-    <div class="col-10 p-2">
+    <div class="col-10">
       <div class="row inner-navbar">
         <%= render 'shared/navbar' %>
       </div>
 
-    <div class="container >
-      <div class="row justify-content-center">
-        <div class="col-12" %>
-          <%= link_to "New Task", new_task_path %>
-          <div class="row">
-            <% @tasks.each do |task| %>
-              <div class="col">
-                <div class="card-task">
-                  <div class="card-body">
-                    <h2 class="card-title"><%= task.description %></h2>
-                    <p class="card-text"> <strong>Priority: </strong><%= task.priority %></p>
-                    <p class="card-text"> <strong>Date: </strong><%= task.date_time %></p>
-                    <p class="card-text"> <strong>Complete: </strong><%= task.complete %></p>
-                    <p class="card-text"> <strong>Category: </strong><%= task.category %></p>
-                    <%= link_to "Show Task", task_path(task) %>
-                    <%= link_to "Edit Task", edit_task_path(task) %>
+      <div class="container" >
+        <div class="row">
+          <div class="col-12" %>
+            <%= link_to "New Task", new_task_path %>
+            <div class="row">
+              <% @tasks.each do |task| %>
+                <div class="col-4 p-2">
+                  <div class="card-task">
+                    <div class="card-body">
+                      <h2 class="card-title"><%= task.description %></h2>
+                      <p class="card-text"> <strong>Priority: </strong><%= task.priority %></p>
+                      <p class="card-text"> <strong>Date: </strong><%= task.date_time %></p>
+                      <p class="card-text"> <strong>Complete: </strong><%= task.complete %></p>
+                      <p class="card-text"> <strong>Category: </strong><%= task.category %></p>
+                      <%= link_to "Show Task", task_path(task) %>
+                      <%= link_to "Edit Task", edit_task_path(task) %>
+                    </div>
                   </div>
                 </div>
-              </div>
-            <% end %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
