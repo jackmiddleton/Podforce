@@ -43,12 +43,12 @@
                     <a class="nav-link active" aria-current="page" href="#">Pricing</a>
                   </li>
 
-                  <li class="nav-item">
-                      <%= link_to "Signup", new_user_registration_path, class: "secbtn" %>
+                  <li class="nav-item secbtn">
+                      <%= link_to "Signup", new_user_registration_path %>
                   </li>
 
-                  <li class="nav-item">
-                      <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                  <li class="nav-item secbtn">
+                      <%= link_to "Login", new_user_session_path %>
                   </li>
                 </ul>
               <% end %>
@@ -60,7 +60,7 @@
     <figure class="text-center">
     <h1>Manage & Grow Your Podcast With Podforce!</h1>
     <p>All in one central platform</p>
-      <%= link_to "Try Now", new_user_registration_path, class: "secbtn" %>
+      <span class="secbtn"><%= link_to "Try Now", new_user_registration_path %></span>
     </figure>
   </div>
 </div>
