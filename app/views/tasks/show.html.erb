@@ -9,26 +9,32 @@
         <%= render 'shared/navbar' %>
       </div>
 
-      <div class="container mt-3" >
-        <div class="card tasks-show">
-          <div class="row justify-content-center">
-            <div class="col-12 ml-3">
-              <h1>Task</h1>
-              <p class="card-text"> <strong>Content: </strong><%= @task.description %></p>
-              <p class="card-text"> <strong>Priority: </strong><%= @task.priority %></p>
-              <p class="card-text"> <strong>Date: </strong><%= @task.date_time %></p>
-              <p class="card-text"> <strong>Complete: </strong><i class="far <%= @task.complete ? "fa-check-square" : "fa-square" %>"></i></p>
-              <p class="card-text"> <strong>Category: </strong><%= @task.category %></p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <span class="secbtn"><%= link_to "New Task", new_task_path %></span>
+            <span class="secbtn"><%= link_to "Back", tasks_path %></span>
+            <div class="row">
+              <div class="col-12 p-2">
+                <div class="card-task">
+                  <h2><%= @task.description %></h2>
+                  <p class="card-text"> <strong>Priority: </strong><%= @task.priority %></p>
+                  <p class="card-text"> <strong>Date: </strong><%= @task.date_time %></p>
+                  <p class="card-text"> <strong>Complete: </strong><i class="far <%= @task.complete ? "fa-check-square" : "fa-square" %>"></i></p>
+
+                  <p class="card-text"> <strong>Category: </strong><%= @task.category %></p>
+                
+                  <% if @task.category == "email" %>
+                    <div>
+                      <%= link_to "Send Email", new_email_path, class: "secbtn" %>
+                    </div>
+                  <%end%>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-          <% if @task.category == "email" %>
-            <div>
-              <%= link_to "Send Email", new_email_path, class: "btn btn-gradient" %>
-            </div>
-          <%end%>
       </div>
-       <%= link_to "Back", dashboard_path %>
     </div>
   </div>
 </div>
