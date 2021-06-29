@@ -12,41 +12,46 @@
       <div id="container-height" class="row">
         <div class="col-4">
           <div class="dashboard-reviews justify-content-end">
-              <h1 id="header"><strong>Recent Review </strong></h1>
-              <div class="col-12 ">
-                  <div>
-                    <div class="card-body d-flex">
-                      <p class="card-title"> <strong> Comment </strong></p>
-                      <p class="card-text"> Rating</p>
-                    </div>
-                  </div>
-                  <div id="reviews" class="card">
-                    <div class="card-body d-flex justify-content-evenly">
-                      <p class="card-title"> Amazing podcast!</p>
-                      <%= image_tag "five-stars.png"%>
-                    </div>
-                  </div>
-                  <div id="reviews" class="card">
-                    <div class="card-body d-flex justify-content-evenly">
-                      <p class="card-title"> Loved the last Podcast!!</p>
-                      <%= image_tag "4-starts.png"%>
-                    </div>
-                  </div>
-                  <div id="reviews" class="card">
-                    <div class="card-body d-flex justify-content-evenly">
-                      <p class="card-title"> Great Content</p>
-                      <%= image_tag "five-stars.png"%>
-                    </div>
-                  </div>
+            <h1 id="header"><strong>Recent Review </strong></h1>
+            <div class="col-12 ">
+              <div>
+                <div class="card-body d-flex">
+                  <p class="card-title"> <strong> Comment </strong></p>
+                  <p class="card-text"> Rating</p>
+                </div>
               </div>
+              <div id="reviews" class="card">
+                <div class="card-body d-flex justify-content-evenly">
+                  <p class="card-title"> Amazing podcast!</p>
+                  <%= image_tag "five-stars.png"%>
+                </div>
+              </div>
+              <div id="reviews" class="card">
+                <div class="card-body d-flex justify-content-evenly">
+                  <p class="card-title"> Loved the last Podcast!!</p>
+                  <%= image_tag "4-starts.png"%>
+                </div>
+              </div>
+              <div id="reviews" class="card">
+                <div class="card-body d-flex justify-content-evenly">
+                  <p class="card-title"> Great Content</p>
+                  <%= image_tag "five-stars.png"%>
+                </div>
+              </div>
+
+            </div>
           </div>
           <div class="dashboard-podcasts justify-content-end">
             <h1 id="special-heather">The LiveUltra Podcast</h1>
-            <script id="podcast" type="text/javascript">
+
+
+
+            <script type="text/javascript">
+              <!--
               rssfeed_url = new Array();
               rssfeed_url[0]="https://theliveultrapodcast.libsyn.com/rss";
-              rssfeed_frame_width="600";
-              rssfeed_frame_height="400";
+              rssfeed_frame_width="413";
+              rssfeed_frame_height="458";
               rssfeed_scroll="off";
               rssfeed_scroll_step="6";
               rssfeed_scroll_bar="on";
@@ -79,7 +84,7 @@
               rssfeed_item_description_tag="off";
               rssfeed_no_items="0";
               rssfeed_cache = "875df16ee41da9abcd4c2e969f4db568";
-//-->
+
             </script>
             <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
           </div>
@@ -93,7 +98,7 @@
                 <div class="col-12 mt-3">
                   <div class="card-mini-task">
                     <div class="card-body d-flex justify-content-between">
-                      <div>
+                      <div class="p-2">
                         <%= button_to toggle_completed_task_path(task), method: :put, remote: true, class: "checkbutton" do %>
                           <i class="far <%= task.complete ? "fa-check-square" : "fa-square" %>"></i>
                             <%#= f.input_field :complete, as: :boolean, boolean_style: :inline, checked_value: true, unchecked_value: false %>
@@ -116,6 +121,7 @@
                           <% end %>
                         <% end %>
                       </div>
+
                       <div>
                         <% if task.complete %>
                           <p id="card-title-design-underline" class="card-text"> <%= task.date_time %></p>
@@ -123,6 +129,7 @@
                           <p  class="card-text"> <%= task.date_time %></p>
                         <% end %>
                       </div>
+
                     </div>
                   </div>
                 </div>
