@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
     # before_action :set_task, only: [:show, :destroy]
-    
+
     def index
         #@tasks = Task.all
         @tasks = Task.where(user: current_user)
@@ -40,7 +40,7 @@ class TasksController < ApplicationController
             render :edit
         end
     end
-    
+
     def toggle_completed
         @task = Task.find(params[:id])
 # byebug
@@ -53,7 +53,7 @@ class TasksController < ApplicationController
 
     private
     def task_params
-        params.require(:task).permit(:description, :contact, :priority, :date_time, :ownership, :complete, :category)
+        params.require(:task).permit(:description, :contact_id, :priority, :date_time, :ownership, :complete, :category)
     end
 
 end

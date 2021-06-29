@@ -61,10 +61,18 @@
   height: 100%;
 }
 
+#reviews{
+  width: 364px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 18px;
+  border-radius: 4px;
+}
+
 #button{
   padding: 10px;
-  margin-top: 150px;
-  margin-left: 700px;
+  margin-top: 20%;
+  margin-left: 50%;
   text-align: center;
   justify-content: center;
   background-color: #9c6ef5;
@@ -84,3 +92,12 @@
   width: 100%;
 }
 
+.podcast{
+  color: black;
+  background-color: purple;
+}
+
+.picture{
+  border-radius: 50%;
+
+}

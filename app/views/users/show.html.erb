@@ -14,16 +14,33 @@
           <div class="dashboard-reviews justify-content-end">
               <h1 id="header"><strong>Recent Review </strong></h1>
               <div class="col-12 ">
-                  <div class="card">
-                    <div class="card-body d-flex justify-content-left">
-                      <p class="card-title"> Comment</p>
+                  <div>
+                    <div class="card-body d-flex">
+                      <p class="card-title"> <strong> Comment </strong></p>
                       <p class="card-text"> Rating</p>
                     </div>
                   </div>
+                  <div id="reviews" class="card">
+                    <div class="card-body d-flex">
+                      <p class="card-title"> Amazing podcast!</p>
+                      <p class="card-text"> Rating</p>
+                    </div>
+                  </div>
+                  <div id="reviews" class="card">
+                    <div class="card-body d-flex">
+                      <p class="card-title"> Loved the last Podcast!!</p>
+                      <p class="card-text"> Rating</p>
+                    </div>
+                  </div>
+                  <div id="reviews" class="card">
+                    <div class="card-body d-flex">
+                      <p class="card-title"> Great Content</p>
               </div>
           </div>
           <div class="dashboard-podcasts justify-content-end">
             <h1 id="special-heather">The LiveUltra Podcast</h1>
+            <script id="podcast" type="text/javascript">
+
               
             <script type="text/javascript">
               <!--
@@ -91,6 +108,14 @@
                             <del class="card-title"><%= task.description %></del>
                           <% else %>
                             <p class="card-title"><%= task.description %></p>
+                          <% end %>
+                        <% end %>
+                      </div>
+
+                      <div>
+                        <% if task.contact.present? %>
+                          <% if task.contact.photo.present? %>
+                            <%= cl_image_tag task.contact.photo.key, class:"picture"%>
                           <% end %>
                         <% end %>
                       </div>
