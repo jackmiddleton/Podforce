@@ -35,18 +35,19 @@
                   <div id="reviews" class="card">
                     <div class="card-body d-flex">
                       <p class="card-title"> Great Content</p>
-                      <p class="card-text"> Rating</p>
-                    </div>
-                  </div>
               </div>
           </div>
           <div class="dashboard-podcasts justify-content-end">
             <h1 id="special-heather">The LiveUltra Podcast</h1>
             <script id="podcast" type="text/javascript">
+
+              
+            <script type="text/javascript">
+              <!--
               rssfeed_url = new Array();
               rssfeed_url[0]="https://theliveultrapodcast.libsyn.com/rss";
-              rssfeed_frame_width="600";
-              rssfeed_frame_height="400";
+              rssfeed_frame_width="413";
+              rssfeed_frame_height="458";
               rssfeed_scroll="off";
               rssfeed_scroll_step="6";
               rssfeed_scroll_bar="on";
@@ -93,7 +94,7 @@
                 <div class="col-12 mt-3">
                   <div class="card-mini-task">
                     <div class="card-body d-flex justify-content-between">
-                      <div>
+                      <div class="p-2">
                         <%= button_to toggle_completed_task_path(task), method: :put, remote: true, class: "checkbutton" do %>
                           <i class="far <%= task.complete ? "fa-check-square" : "fa-square" %>"></i>
                             <%#= f.input_field :complete, as: :boolean, boolean_style: :inline, checked_value: true, unchecked_value: false %>
@@ -101,7 +102,7 @@
                         <% end %>
                       </div>
 
-                      <div>
+                      <div class="p-2">
                         <%= link_to(task) do %>
                           <% if task.complete %>
                             <del class="card-title"><%= task.description %></del>
@@ -119,7 +120,7 @@
                         <% end %>
                       </div>
 
-                      <div>
+                      <div class="ml-auto p-2">
                         <p class="card-text"> <%= task.date_time %></p>
                       </div>
                     </div>
