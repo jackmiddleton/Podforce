@@ -114,7 +114,9 @@
                             <p id="card-title-design" class="card-title"><%= task.description %></p>
                           <% end %>
                         <% end %>
+                      </div>
 
+                      <div class="p-2">
                         <% if task.contact.present? %>
                           <% if task.contact.photo.present? %>
                             <%= cl_image_tag task.contact.photo.key, class:"picture"%>
@@ -122,7 +124,7 @@
                         <% end %>
                       </div>
 
-                      <div class="p-2">
+                      <div class="ml-auto p-2">
                         <% if task.complete %>
                           <p id="card-title-design-underline" class="card-text"> <%= task.date_time %></p>
                         <% else %>
