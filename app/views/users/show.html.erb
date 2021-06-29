@@ -12,30 +12,34 @@
       <div id="container-height" class="row">
         <div class="col-4">
           <div class="dashboard-reviews justify-content-end">
-              <h1 id="header"><strong>Recent Review </strong></h1>
-              <div class="col-12 ">
-                  <div>
-                    <div class="card-body d-flex">
-                      <p class="card-title"> <strong> Comment </strong></p>
-                      <p class="card-text"> Rating</p>
-                    </div>
-                  </div>
-                  <div id="reviews" class="card">
-                    <div class="card-body d-flex">
-                      <p class="card-title"> Amazing podcast!</p>
-                      <p class="card-text"> Rating</p>
-                    </div>
-                  </div>
-                  <div id="reviews" class="card">
-                    <div class="card-body d-flex">
-                      <p class="card-title"> Loved the last Podcast!!</p>
-                      <p class="card-text"> Rating</p>
-                    </div>
-                  </div>
-                  <div id="reviews" class="card">
-                    <div class="card-body d-flex">
-                      <p class="card-title"> Great Content</p>
+            <h1 id="header"><strong>Recent Review </strong></h1>
+            <div class="col-12 ">
+              <div>
+                <div class="card-body d-flex">
+                  <p class="card-title"> <strong> Comment </strong></p>
+                  <p class="card-text"> Rating</p>
+                </div>
               </div>
+              <div id="reviews" class="card">
+                <div class="card-body d-flex justify-content-evenly">
+                  <p class="card-title"> Amazing podcast!</p>
+                  <%= image_tag "five-stars.png"%>
+                </div>
+              </div>
+              <div id="reviews" class="card">
+                <div class="card-body d-flex justify-content-evenly">
+                  <p class="card-title"> Loved the last Podcast!!</p>
+                  <%= image_tag "4-starts.png"%>
+                </div>
+              </div>
+              <div id="reviews" class="card">
+                <div class="card-body d-flex justify-content-evenly">
+                  <p class="card-title"> Great Content</p>
+                  <%= image_tag "five-stars.png"%>
+                </div>
+              </div>
+
+            </div>
           </div>
           <div class="dashboard-podcasts justify-content-end">
             <h1 id="special-heather">The LiveUltra Podcast</h1>
@@ -80,7 +84,7 @@
               rssfeed_item_description_tag="off";
               rssfeed_no_items="0";
               rssfeed_cache = "875df16ee41da9abcd4c2e969f4db568";
-//-->
+
             </script>
             <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
           </div>
@@ -102,17 +106,15 @@
                         <% end %>
                       </div>
 
-                      <div class="p-2">
+                      <div class="d-flex justify-content-around p-2">
                         <%= link_to(task) do %>
                           <% if task.complete %>
-                            <del class="card-title"><%= task.description %></del>
+                            <del id="card-title-design-underline" class="card-title"><%= task.description %></del>
                           <% else %>
-                            <p class="card-title"><%= task.description %></p>
+                            <p id="card-title-design" class="card-title"><%= task.description %></p>
                           <% end %>
                         <% end %>
-                      </div>
 
-                      <div>
                         <% if task.contact.present? %>
                           <% if task.contact.photo.present? %>
                             <%= cl_image_tag task.contact.photo.key, class:"picture"%>
@@ -120,9 +122,14 @@
                         <% end %>
                       </div>
 
-                      <div class="ml-auto p-2">
-                        <p class="card-text"> <%= task.date_time %></p>
+                      <div class="p-2">
+                        <% if task.complete %>
+                          <p id="card-title-design-underline" class="card-text"> <%= task.date_time %></p>
+                        <% else %>
+                          <p  class="card-text"> <%= task.date_time %></p>
+                        <% end %>
                       </div>
+
                     </div>
                   </div>
                 </div>
