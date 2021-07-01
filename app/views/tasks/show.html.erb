@@ -23,10 +23,10 @@
                   <p class="card-text"> <strong>Complete: </strong><i class="far <%= @task.complete ? "fa-check-square" : "fa-square" %>"></i></p>
 
                   <p class="card-text"> <strong>Category: </strong><%= @task.category %></p>
-                
-                  <% if @task.category == "email" %>
+
+                  <% if @task.category == "email" && @task.contact.present? %>
                     <div>
-                      <%= link_to "Send Email", new_email_path, class: "secbtn" %>
+                      <a class= "secbtn" href="mailto: <%= @task.contact.email %> ?subject=Episode Live" style="">Send Email</a>
                     </div>
                   <%end%>
                 </div>
