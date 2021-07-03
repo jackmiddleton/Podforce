@@ -22,7 +22,17 @@
                       <h2 class="card-title"><%= task.description %></h2>
                       <p class="card-text"> <strong>Priority: </strong><%= task.priority %></p>
                       <p class="card-text"> <strong>Date: </strong><%= task.date_time %></p>
-                      <p class="card-text"> <strong>Complete: </strong><%= task.complete %></p>
+                      <div class="d-flex justify-content-center">
+                        <p class="card-text"><strong>Complete: </strong>
+                          <%= button_to toggle_completed_task_path(task), method: :put, remote: true, class: "checkbutton" do %>
+                            <i class="far <%= task.complete ? "fa-check-square" : "fa-square" %>"></i>
+                              <%#= f.input_field :complete, as: :boolean, boolean_style: :inline, checked_value: true, unchecked_value: false %>
+                              <%#= f.submit %>
+                          <% end %>
+                        </p>
+                      </div>
+                        
+
                       <p class="card-text"> <strong>Category: </strong><%= task.category %></p>
                       <%= link_to "Show Task", task_path(task) %>
                       <%= link_to "Edit Task", edit_task_path(task) %>

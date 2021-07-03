@@ -1,6 +1,6 @@
 <div class="dashboard-container">
   <div class="row">
-    <div class="sidebar col-2 col-sm-1">
+    <div class="sidebar">
       <%= render 'shared/sidebar' %>
     </div>
 
@@ -17,18 +17,31 @@
             <div class="row">
               <div class="col-12 p-2">
                 <div class="card-task">
-                  <h2><%= @task.description %></h2>
-                  <p class="card-text"> <strong>Priority: </strong><%= @task.priority %></p>
-                  <p class="card-text"> <strong>Date: </strong><%= @task.date_time %></p>
-                  <p class="card-text"> <strong>Complete: </strong><i class="far <%= @task.complete ? "fa-check-square" : "fa-square" %>"></i></p>
+                  <div class="card-body">
+                    <h2><%= @task.description %></h2>
+                    <p class="card-text"> <strong>Priority: </strong><%= @task.priority %></p>
+                    <p class="card-text"> <strong>Date: </strong><%= @task.date_time %></p>
+                    <div class="d-flex justify-content-center">
+                      <p class="card-text"> <strong>Complete:  </strong>
+                    
+                        <%= button_to toggle_completed_task_path(@task), method: :put, remote: true, class: "checkbutton" do %>
+                          <i class="far <%= @task.complete ? "fa-check-square" : "fa-square" %>"></i>
+                            <%#= f.input_field :complete, as: :boolean, boolean_style: :inline, checked_value: true, unchecked_value: false %>
+                            <%#= f.submit %>
+                        <% end %>
 
-                  <p class="card-text"> <strong>Category: </strong><%= @task.category %></p>
-
-                  <% if @task.category == "email" && @task.contact.present? %>
-                    <div>
-                      <a class= "secbtn" href="mailto: <%= @task.contact.email %> ?subject=Episode Live" style="">Send Email</a>
+                      </p>
                     </div>
-                  <%end%>
+                    
+
+                    <p class="card-text"> <strong>Category: </strong><%= @task.category %></p>
+
+                    <% if @task.category == "email" && @task.contact.present? %>
+                      <div>
+                        <a class= "secbtn" href="mailto: <%= @task.contact.email %> ?subject=Episode Live" style="">Send Email</a>
+                      </div>
+                    <%end%>
+                  </div>
                 </div>
               </div>
             </div>
