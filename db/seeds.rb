@@ -35,6 +35,19 @@ task5 = Task.create!({contact: contact1, user: user3, description: "Send email w
 
 task6 = Task.create!({contact: contact2, user: user3, description: "Send email with invitation", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "email"})
 
+task7 = Task.create!({contact: contact1, user: user1, description: "Update Podcasts ideas Template", priority: "Low", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "review"}})
+
+task8 = Task.create!({contact: contact2, user: user2, description: "Update Podcasts ideas Template", priority: "Low", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "review"}})
+
+task9 = Task.create!({contact: contact1, user: user3, description: "Update Podcasts ideas Template", priority: "Low", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "review"}})
+
+task10 = Task.create!({contact: contact1, user: user1, description: "Zoom Meeting today with Sarah", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "review"}})
+
+task11 = Task.create!({contact: contact2, user: user2, description: "Zoom Meeting today with Sarah", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "review"}})
+
+task12 = Task.create!({contact: contact2, user: user3, description: "Zoom Meeting today with Sarah", priority: "High", date_time: DateTime.new(2022,2,3), ownership: "You", complete: false, category: "review"}})
+
+
 puts "Creating 2 emails for each of the 3 users"
 
 email1 = Email.create!({contact: contact1, to: contact1, subject: "ZOOM meeting", content: "Hi Sarah, please lets discuss our next podcast episode. Therefore I would like to invite you to a ZOOM meeting. Best regards. Jack", date_time: DateTime.new(2022,2,3)})
