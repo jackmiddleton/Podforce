@@ -12,17 +12,19 @@
     height: 100px;
     color: #ffffff;
     justify-content: space-around;
-    border-radius: 5px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     padding: 20px;
 
   }
 
-.contact-profile{
+#contact-profile{
     background-color: white;
     border-radius: 12px;
     color: #7a7d80;
     height: 80%;
-    border-radius: 5px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .contact-tasks{
@@ -31,8 +33,8 @@
     color: #7a7d80;
     height: 80%;
     justify-content: left;
-    border-radius: 5px;
-
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 #navbar-color{
@@ -105,4 +107,9 @@ img{
 .card-button:hover{
   text-decoration: none;
   background-color: #9637E2;
+}
+
+.special-header{
+  margin: 10px;
+
 }
